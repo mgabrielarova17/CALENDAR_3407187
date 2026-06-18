@@ -1,0 +1,44 @@
+body{
+    font-family: Verdana;
+    background-color: #f5f7fa;
+    color: #51565d;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ffff;
+    max-width: 1200px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.month{
+    text-align: center;
+    font-weight: 400;
+    padding: 30px 0;
+}
+
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 70px;
+    border-bottom: 1px solid #a6a8b31f;
+    border-top: 1px solid #a6a8b31f;
+    place-items: center
+}
+
+/* container grid
+de los dias del mes */
+.schedule{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* alto de cada fila producida */
+    grid-auto-rows: 120px;
+}
+
+/* cada uno de los dias */
+.schedule__days{
+    border-bottom: 1px solid #a6a8b31f;
+    border-radius: 1px solid #a6a8b31f;
+}
