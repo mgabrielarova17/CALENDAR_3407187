@@ -8,6 +8,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- menu responsive -->
+    <!-- menu dimensionamiento -->
+     <div class="main-header">
+        <div class="main-header__container">
+
+            <!-- logo -->
+             <div class="main-header__logo">
+                Mis Eventos
+             </div>
+
+             <!-- boton hamburguesa -->
+              <button class="main-header__toggle" id="menu-toggle">
+                    <div class="main-header__bar"></div>
+                    <div class="main-header__bar"></div>
+                    <div class="main-header__bar"></div>
+              </button>
+
+              <!-- barra de navegacion -->
+               <nav class="main-nav" id="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Buscar
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Ayuda
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Configuracion
+                            </a>
+                        </li>
+                    </ul>
+               </nav>
+        </div>
+     </div>
+
+
+
+
+
+
+
+
     <div class="container">
         <div class="month">
             June
@@ -54,5 +101,22 @@
             <div class="schedule__days">30</div>
         </div>
     </div>
+    <script>
+
+        const menuToggle = document.querySelector('#menu-toggle');
+        console.log(menuToggle)
+        const mainNav = document.getElementById("main-nav");
+        console.log(mainNav)
+
+        //evento click del boton hamburguesa//
+        menuToggle.addEventListener('click', function(){
+            //remplazar los estilos de main-nav por los siguientes//
+            mainNav.classList.toggle('main-nav__open');
+        });
+        
+        
+        
+    </script>
+
 </body>
 </html>

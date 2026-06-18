@@ -2,6 +2,7 @@ body{
     font-family: Verdana;
     background-color: #f5f7fa;
     color: #51565d;
+    padding: 110px 0 60px 0;
 }
 
 .container{
@@ -41,4 +42,156 @@ de los dias del mes */
 .schedule__days{
     border-bottom: 1px solid #a6a8b31f;
     border-radius: 1px solid #a6a8b31f;
+    padding: 14px 20px;
 }
+
+/** ESTILOS DEL HERADER: MENU , LOGOS, ETC 
+**/
+.main-header{
+
+    width: 100%;
+    background-color: #FFF;
+
+    /* el menu quede fijo en una posicion */
+    position: fixed;
+    /* posiciones x, y de origen*/
+    top: 0; /* y */
+    left: 0; /* x */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* el menu de navegacion */
+.main-header__container{
+    width: 90%;
+    margin: 0 auto;
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header__logo{
+    font-weight: 700;
+}
+
+/* la lista de opciones del menu */
+.main-nav__list{
+    list-style: none;
+    display: flex;
+    /* espacio entre clos elementos de memoria */
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav__link{
+    /* quitar el subrayado */
+    text-decoration: none;
+    color: #51565d;
+    font-size: 1rem;
+}
+
+.main-nav__link:hover{
+    color: #a42ef3;
+}
+
+
+/* boton hamburguesa: toggle */
+.main-header__toggle{
+    width: 25px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.main-header__bar{
+    width: 100%;
+    height: 3px;
+    background-color: #51565d;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media-query:
+adaptacion de un estilo (clase de css)
+a un breakpoint en particular*/
+
+
+
+
+
+@media screen and (max-width: 500px ){
+
+    .schedule__days{
+        color: red;
+    }
+
+    .container{
+        width: 97%;
+    }
+
+    .schedule__days{
+        padding: 7px 5px;
+        text-align: center;
+    }
+
+    .main-header__toggle{
+        /* poner el boton hamburguesa visible */
+        display: flex;
+    }
+
+    /*bajar el menu de navegacion */
+    .main-nav{
+        position: absolute;
+        /* cordenadas del menu de navegacion */
+        left: 0;
+        top: 70px;
+        background-color: white;
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        /* ocultar el menu de navegacion */
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    /* organizar el menu: ahora vertical */
+    .main-nav__list{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav__item{
+        padding: 15px 20px;
+        border-top: 1px solid #a6a8b31f;
+    }
+
+
+    /* clase activa: clase que se va a activar
+    cuando se presione el boton toggle: */
+    .main-nav__open{
+        max-height: 200px;
+    }
+
+
+
+}
+
+/* un evento tiene un nombre, una descripcion, la hora y un icono alusivo a ese evento*/
